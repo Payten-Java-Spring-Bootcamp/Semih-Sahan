@@ -4,6 +4,47 @@
 
 </div>
 
+#### **Collection Pipeline**
+>	Collection Pipeline, ismindende anlaşılacağı gibi bir pipeline yani boru hattımız var ve bu boru hattından stream yani bir veri akışı var biz bu akan verilerin her birine filter,map,reduce gibi işlemler uygulayarak sonuçta işlenmiş bir stream elde ederiz ve işlenmiş stream’i tekrar işleyebiliriz yani zincirleme bir işlem yapabiliriz işte buna Collection Pipeline deniyor bu bir programlama yöntemidir. Bu model, fonksiyonel programlamada ve ayrıca lambdaları destekleyen nesne yönelimli dillerde yaygındır
+
+<br/>
+
+#### **First Encounters**
+>	Bu pipeline yapısını ilk olarak unix’de görüyoruz ve bu şahane kullanımı C/C++/Java/C# gibi popüler dillerin kullanmayışı bazı yazılımcıları rahatsız etmekteydi ve OOP dünyasına da bu kullanımı kazandırmak istiyorlardı ve neyse ki kazandırıldı, Unix’den sonra Smalltalk daha sonra ruby gibi diller bunu desteklemekte
+
+<br/>
+
+#### **Defining Collection Pipeline**
+> -	Collection Pipeline'ı yazılımı nasıl modülerleştirebileceğimizin ve oluşturabileceğimizin bir modeli olarak görebiliriz
+Laziness
+> -	Laziness yani tembellik ilkesini take metodu güzel anlatıyor aslına, yaptığı şey ise koleksiyonun ilk n elemanını al gerisine bakma böylece baştan sonra tüm koleksiyonu gezmek zorunda kalmıyor, tembellik yapıyor yani 😊 bu gibi yöntemler hep desteklenemiyor maalesef..
+
+<br/>
+
+#### **Parallelism**
+>	Çoğu pipeline operasyonları paralel çağrılar ile iyi çalışır, paralel çağrılar yapılan işin verimliliğini artırır, işleri parçalara bölüp aynı anda yapılması olarak anlaşılabilir, ancak bazen parallelism ilkesi verimliliği azaltadabilir o yüzden bunu test edip öyle kullanmak tavsiye ediliyor.
+
+<br/>
+
+#### **Immutability**
+>	Bu prensip ise pipeline’lara sokulan koleksiyonların, verilerin immutability olması gerektiğini söyler ki pipeline’lardan doğru çıktı alınabilsin, immutability sağlayamayan bazı fonksiyonel programlama dillerinin ise verileri değiştiren değil güncelleyen işlevleri kullanması gerektiğini belirtir.
+
+<br/>
+
+#### **When to use it**
+> -	Collections ne zaman kullanılmalı sorusu aklımıza geldiğinde şu sözü hatırlamalıyız;
+> -	“Extract a method whenever there’s a difference between what a block of code does and how it does it”
+
+
+<br/>
+<br/>
+
+
+<div align=center>
+
+# Operation Catalog
+</div>
+
 #### **Collect**
 >	Collect methodu, Stream’de gerçekleştirilen ara işlemlerin sonucunu döndürmek için kullanılır.
 
