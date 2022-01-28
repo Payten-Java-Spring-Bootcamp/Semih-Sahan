@@ -35,3 +35,5 @@ REST garantili : REST API güdümlü uçtan uca testler yazmak için
 > Bazıları , mükemmel bir izolasyon elde etmek, yan etkilerden ve karmaşık bir test kurulumundan kaçınmak için test edilen konunuzun tüm ortak çalışanlarının (örneğin, test edilen sınıfınız tarafından çağrılan diğer sınıflar) sahte veya taslaklarla değiştirilmesi gerektiğini savunuyor.Şahsen, kendimi her zaman her iki yaklaşımı da kullanırken buluyorum. Gerçek işbirlikçileri kullanmak garip hale gelirse, taklitleri ve taslakları cömertçe kullanacağım. Gerçek işbirlikçiyi dahil etmek bana bir testte daha fazla güven veriyorsa, hizmetimin yalnızca en dış kısımlarını saplayacağım.
 
 # Mocking and Stubbing
+
+> unit test ile yazabildiğin bir şeyi daha üst seviye testlerle yazmamak gerekiyor, testlerin her ortamda çalışabilmesi için mocking kullanmak gerekiyor
