@@ -22,8 +22,8 @@ public class Rate {
     public RateEntity convertToRateEntity(MemberEntity memberEntity,MovieEntity movieEntity) {
         RateEntity entity = new RateEntity();
         entity.setCreatedDate(LocalDateTime.now());
-        entity.setMemberEntity(memberEntity);
-        entity.setMovieEntity(movieEntity);
+        entity.setMember(memberEntity);
+        entity.setMovie(movieEntity);
         entity.setPoint(point);
         return entity;
     }
@@ -31,8 +31,8 @@ public class Rate {
     public static Rate convertFrom(RateEntity entity) {
         return Rate.builder()
                 .createdDate(entity.getCreatedDate())
-                .memberId(entity.getMemberEntity().getId())
-                .movieId(entity.getMovieEntity().getId())
+                .memberId(entity.getMember().getId())
+                .movieId(entity.getMovie().getId())
                 .point(entity.getPoint())
                 .build();
     }

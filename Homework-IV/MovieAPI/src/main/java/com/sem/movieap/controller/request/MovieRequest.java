@@ -13,10 +13,13 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class MovieRequest {
 
+    @NotNull
+    private Long watch_list_id;
+
     @NotBlank
     private String name;
 
-    @NotEmpty
+    //@NotEmpty
     private MovieGenre genre;
 
     @NotNull
@@ -27,6 +30,7 @@ public class MovieRequest {
 
     public Movie convertToMovie() {
         return Movie.builder()
+                .watch_list_id(watch_list_id)
                 .name(name)
                 .genre(genre)
                 .releaseYear(releaseYear)

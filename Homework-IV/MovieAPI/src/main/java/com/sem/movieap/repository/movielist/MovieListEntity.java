@@ -19,9 +19,9 @@ public class MovieListEntity {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private WatchListEntity watchListEntity;
+    private WatchListEntity watchList;
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private MovieEntity movieEntity;
+    private MovieEntity movie;
 }

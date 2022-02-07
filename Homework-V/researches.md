@@ -47,9 +47,11 @@ Asynchronous process’leri, Java configuration’ı ile enable etmeliyiz(@Enabl
 > - Method public olmalıdır.
 > - Aynı class içerisinden @Async bir methodu çağırırsanız çağrılan method asynchronous olarak çalışmaz.
 
-# High Availability (HA) kavramını kısa açıklayınız.
+# High Availability (HA) kavramını kısa açıklayınız.,
+> Bir hizmetin kullanılabilir olduğu süreyi ve bir sistemin bir kullanıcı tarafından yapılan bir isteğe yanıt vermesi için gereken süreyi tanımlamak için kullanılır. High Availability, belirli bir süre boyunca yüksek düzeyde operasyonel performans sağlayan bir sistem veya bileşenin kalitesidir.
 
 # Entity ve Value Object kavramlarını Domain Driven Design (DDD) kapsamında açıklayınız.
+> Temel ayrıma bakacak olursak, kimlik entity için önemlidir, ancak value object için önemli değildir.
 
 # Ubiquitous Language kavramını DDD kapsamında açıklayınız. Sizce neden önemli olabileceğini belirtiniz.
 

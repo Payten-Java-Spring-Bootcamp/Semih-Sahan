@@ -2,6 +2,7 @@ package com.sem.movieap.service.movie;
 
 import com.sem.movieap.MovieGenre;
 import com.sem.movieap.repository.movie.MovieEntity;
+import com.sem.movieap.repository.watchlist.WatchListEntity;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,13 +12,15 @@ import lombok.Getter;
 @EqualsAndHashCode
 public class Movie {
 
+    private Long watch_list_id;
     private String name;
     private MovieGenre genre;
     private String releaseYear;
     private String director;
 
-    MovieEntity convertToMovieEntity() {
+    MovieEntity convertToMovieEntity(WatchListEntity watchListEntity) {
         MovieEntity movieEntity = new MovieEntity();
+        movieEntity.setWatchList(watchListEntity);
         movieEntity.setName(getName());
         movieEntity.setDirector(getDirector());
         movieEntity.setReleaseYear(getReleaseYear());

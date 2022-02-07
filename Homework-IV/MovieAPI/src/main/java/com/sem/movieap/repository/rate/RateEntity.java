@@ -26,9 +26,9 @@ public class RateEntity {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private MemberEntity memberEntity;
+    private MemberEntity member;
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private MovieEntity movieEntity;
+    private MovieEntity movie;
 }

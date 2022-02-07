@@ -9,7 +9,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MemberDaoImpl implements MemberDao{
 
-    private MemberJpaRepository memberJpaRepository;
+    private final MemberJpaRepository memberJpaRepository;
 
     @Override
     public Long save(MemberEntity entity) {

@@ -22,8 +22,8 @@ public class WatchListEntity {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private MemberEntity memberEntity;
+    private MemberEntity member;
 
-    @OneToMany(mappedBy = "watchListEntity", fetch = FetchType.EAGER)
-    private List<MovieEntity> movieEntity;
+    @OneToMany(mappedBy = "watchList", fetch = FetchType.EAGER)
+    private List<MovieEntity> movie;
 }

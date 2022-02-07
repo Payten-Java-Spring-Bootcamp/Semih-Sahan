@@ -9,6 +9,13 @@ public class MovieCreateResponse {
 
     private Long id;
 
+    public MovieCreateResponse() {
+    }
+
+    public MovieCreateResponse(Long id) {
+        this.id = id;
+    }
+
     public static MovieCreateResponse convertToMovieCreateResponse(Long id) {
         return MovieCreateResponse.builder()
                 .id(id)

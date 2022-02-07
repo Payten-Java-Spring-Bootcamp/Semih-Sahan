@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
 
-    private MemberDao memberDao;
+    private final MemberDao memberDao;
 
     @Override
     public Long create(Member member) {

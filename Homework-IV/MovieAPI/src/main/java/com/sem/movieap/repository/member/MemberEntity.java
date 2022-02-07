@@ -22,9 +22,9 @@ public class MemberEntity {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "memberEntity", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "member", fetch = FetchType.EAGER)
     private List<WatchListEntity> watchListEntities;
 
-    @OneToMany(mappedBy = "memberEntity", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "member", fetch = FetchType.EAGER)
     private List<RateEntity> rateEntities;
 }

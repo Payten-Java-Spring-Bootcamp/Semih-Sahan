@@ -23,6 +23,6 @@ public class ActorEntity {
     @Column(nullable = false)
     private LocalDateTime birthDate;
 
-    @OneToMany(mappedBy = "actorEntity", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "actor", fetch = FetchType.EAGER)
     private List<MatchingEntity> matchingEntities;
 }

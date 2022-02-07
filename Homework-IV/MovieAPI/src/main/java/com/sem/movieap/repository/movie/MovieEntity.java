@@ -2,7 +2,6 @@ package com.sem.movieap.repository.movie;
 
 import com.sem.movieap.MovieGenre;
 import com.sem.movieap.repository.matching.MatchingEntity;
-import com.sem.movieap.repository.member.MemberEntity;
 import com.sem.movieap.repository.movielist.MovieListEntity;
 import com.sem.movieap.repository.rate.RateEntity;
 import com.sem.movieap.repository.watchlist.WatchListEntity;
@@ -33,16 +32,16 @@ public class MovieEntity {
     @Column(nullable = false)
     private String director;
 
-    @OneToMany(mappedBy = "movieEntity", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "movie")
     private List<RateEntity> ratesEntities;
 
-    @OneToMany(mappedBy = "movieEntity", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "movie", fetch = FetchType.EAGER)
     private List<MovieListEntity> movieListEntities;
 
-    @OneToMany(mappedBy = "movieEntity", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "movie")
     private List<MatchingEntity> matchingEntities;
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private WatchListEntity watchListEntity;
+    private WatchListEntity watchList;
 }
